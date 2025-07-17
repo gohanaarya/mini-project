@@ -1,0 +1,60 @@
+/* Navbar.css */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    background-color: #252525;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* backdrop-filter: blur(10px); */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-right: 20px;
+  }
+  
+  .nav-links li {
+    font-size: 16px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color:white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: var(--app-hover);
+  }
+  
+  .cta-button {
+    padding: 8px 16px;
+    background-color: var(background-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: var(--app-hover);
+  }
+  

@@ -1,0 +1,104 @@
+.orders-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.order-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px 28px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  position: relative;
+  transition: box-shadow 0.2s ease;
+}
+
+.order-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.order-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+.order-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #4b5563;
+  margin-bottom: 16px;
+}
+
+.order-meta span {
+  background: #ede9fe;
+  color: #7c3aed;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.order-card p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.order-card strong {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.order-items {
+  margin: 12px 0 16px;
+  padding-left: 1rem;
+}
+
+.status-tag {
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: 6px;
+  text-transform: capitalize;
+  background-color: red;
+  color: white;
+}
+
+.status-tag.pending {
+  background-color: #facc15;
+  color: #78350f;
+}
+
+.status-tag.completed {
+  background-color: #ef4444;
+  color: #fff;
+}
+
+/* .status-tag['out for-delivery'] {
+  background-color: #8b5cf6;
+  color: #fff;
+} */
+
+.address-block {
+  margin: 8px 0 16px;
+  padding-left: 0.5rem;
+  color: #4b5563;
+}
+
+.total-amount {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 20px;
+  text-align: right;
+  color: #111827;
+}

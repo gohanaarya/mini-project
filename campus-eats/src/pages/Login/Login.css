@@ -1,0 +1,72 @@
+/* Login.css */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background-color: var(--app-background); */
+
+    /* background-repeat: no-repeat; */
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image:url('../../images/1159027_ORFF0J0.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .login-form {
+    background: rgba(18, 18, 18, 0.062); /* semi-transparent white */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* for Safari */
+    border: 1px solid rgb(156, 154, 154);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  
+  .login-form h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #252525;
+  }
+  
+  .input-group {
+    margin-bottom: 1rem;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #252525;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--app-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background-color: var(--app-hover);
+  }
+  

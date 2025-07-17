@@ -1,0 +1,115 @@
+/* Home.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+  }
+  
+  .home-container {
+    color: white;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .logo {
+    font-size: 28px;
+    font-weight: 900;
+    color: #ff9900;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    height: 90px;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  
+  .logo img {
+    height: 60px; /* instead of 100px */
+    width: auto;
+    margin: 0; /* remove the big top/left margins */
+    object-fit: contain;
+  }
+  
+  
+  .nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .nav a:hover {
+    color: var(--app-hover);
+  }
+  
+  .cta-button {
+    background-color: var(--app-color);
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .cta-button:hover {
+    background-color: var(--app-hover);
+  }
+  
+  .heros {
+    display: flex;
+    justify-content: space-between;  /* spreads items across */
+    align-items: center;
+    padding: 50px;
+    height: calc(100vh - 90px); /* subtract header height */
+  }
+  
+  .hero {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin-bottom: 30px;
+  }
+  
+  .rotating-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .rotating-image img {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    animation: spin 60s linear infinite; /* adjust speed as needed */
+  }
+  
+  
