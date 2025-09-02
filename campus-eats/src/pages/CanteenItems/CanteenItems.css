@@ -62,3 +62,36 @@
 .add-to-cart-button:hover {
   background-color: #246b45;
 }
+
+
+@media (max-width: 340px) {
+  .canteen-items-container {
+    padding: 10px;
+  }
+
+  .food-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .food-card {
+    border-radius: 8px;
+  }
+
+  .food-image {
+    height: 120px;
+  }
+
+  .food-info h4 {
+    font-size: 16px;
+  }
+
+  .food-info p {
+    font-size: 14px;
+  }
+
+  .add-to-cart-button {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+}

@@ -39,7 +39,7 @@ const Checkout = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        "http://localhost:5000/api/orders/post",
+        "https://mini-project-n8cx.onrender.com/api/orders/post",
         orderDetails,
         {
           headers: {

@@ -1,21 +1,21 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
-import { useUserAuth } from "./UserAuthContext"; // import token & user
+import { useUserAuth } from "./UserAuthContext"; 
 
 const CanteenContext = createContext();
 
 export const CanteenProvider = ({ children }) => {
-  const { token } = useUserAuth(); // get token from auth context
+  const { token } = useUserAuth();
   const [canteens, setCanteens] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchCanteens = async () => {
       try {
-        if (!token) return; // wait until token is available
+        if (!token) return; 
         setLoading(true);
 
-        const res = await axios.get("http://localhost:5000/api/auth/canteens", {
+        const res = await axios.get("https://mini-project-n8cx.onrender.com/api/auth/canteens", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

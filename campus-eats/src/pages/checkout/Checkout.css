@@ -118,3 +118,82 @@ label {
 .place-button:hover {
   background-color: #dc2626;
 }
+
+
+
+/* For screens ≤ 445px */
+@media (max-width: 445px) {
+  .checkout-container {
+    padding: 1rem;
+    margin: 1.5rem auto;
+  }
+
+  .card {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .checkout-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .back-button,
+  .place-button {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .summary-item,
+  .total-row {
+    font-size: 0.95rem;
+  }
+
+  .card h2 {
+    font-size: 1rem;
+  }
+
+  .delivery-address-box {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* For screens ≤ 300px */
+@media (max-width: 300px) {
+  .checkout-container h1 {
+    font-size: 1.4rem;
+  }
+
+  .checkout-container p {
+    font-size: 0.9rem;
+  }
+
+  .card h2 {
+    font-size: 0.95rem;
+  }
+
+  .summary-item,
+  .total-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    font-size: 0.85rem;
+  }
+
+  .back-button,
+  .place-button {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  textarea {
+    font-size: 0.85rem;
+  }
+
+  .delivery-address-box {
+    font-size: 13px;
+    padding: 8px;
+  }
+}

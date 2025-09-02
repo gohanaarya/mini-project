@@ -17,7 +17,7 @@ export const OrderProvider = ({ children }) => {
     if (!fetched && userEmail) {
       try {
         if (!token) return; 
-        const res = await axios.get(`http://localhost:5000/api/orders/list?userEmail=${userEmail}`,{
+        const res = await axios.get(`https://mini-project-n8cx.onrender.com/api/orders/list?userEmail=${userEmail}`,{
           headers: {
             Authorization: `Bearer ${token}`,
           },

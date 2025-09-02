@@ -2,15 +2,19 @@
 import { Link } from "react-router-dom";
 import "./Canteen.css";
 import { useCanteens } from "../../context/CanteenContext";
+import { useUserAuth } from "../../context/UserAuthContext";
 
 const Canteens = () => {
   const { canteens, loading } = useCanteens();
+  const {user}=useUserAuth()
 
   if (loading) return <p style={{ textAlign: "center" }}>Loading canteens...</p>;
 
   return (
     <div className="restaurants-container">
-      <h2>Restaurants in College</h2>
+      {
+user?(<h2>Restaurants in College</h2>):(<h2>Login to get canteens</h2>)
+}
       
       <div className="restaurants-grid">
         {canteens.map((restaurant) => (

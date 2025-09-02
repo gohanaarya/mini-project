@@ -30,7 +30,7 @@ export function UserAuthContextProvider(props) {
     const token = localStorage.getItem("token");
     if (token) {
       axios
-        .get("http://localhost:5000/api/auth/me", {
+        .get("https://mini-project-n8cx.onrender.com/api/auth/me", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

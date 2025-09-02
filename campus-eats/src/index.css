@@ -16,3 +16,26 @@ code {
 .Toastify__toast-container {
   z-index: 999999;
 }
+/* Fix double scrollbar by restricting overflow */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Hide scrollbars across browsers */
+html, body {
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari */
+}
+
+
+
+

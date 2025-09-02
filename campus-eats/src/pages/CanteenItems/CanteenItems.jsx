@@ -5,11 +5,12 @@ import { useCart } from "../../context/CartContext";
 import { useCanteenItems } from "../../context/CanteenItemsContext";
 import "./CanteenItems.css";
 import { toast } from 'react-toastify';
+
 const CanteenItems = () => {
   let { id } = useParams();
   id=id.slice(0,-4);
   console.log(id);
-  const { cart, dispatch } = useCart(); // ✅ include `cart`
+  const { cart, dispatch } = useCart(); //  include `cart`
   const { canteenFoods, setFoodsForCanteen } = useCanteenItems();
 
   const [loading, setLoading] = useState(true);
@@ -32,7 +33,7 @@ const CanteenItems = () => {
     }
 
     axios
-      .get(`http://localhost:5000/api/canteens/${id}/foods`, {
+      .get(`https://mini-project-n8cx.onrender.com/api/canteens/${id}/foods`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -83,7 +84,7 @@ const CanteenItems = () => {
                 <button
                   className="add-to-cart-button"
                   onClick={() => handleAddToCart(item)}
-                  disabled={alreadyInCart} // ✅ disable if in cart
+                  disabled={alreadyInCart} // disable if in cart
                 >
                   {alreadyInCart ? "In Cart" : "Add to Cart"}
                 </button>

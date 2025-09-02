@@ -88,3 +88,60 @@
     font-size: 14px;
   }
   
+
+@media (max-width: 340px) {
+
+    .restaurants-container h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .restaurants-grid {
+    grid-template-columns: 1fr; /* single column layout */
+    gap: 15px;
+  }
+
+  .restaurant-card {
+    border-radius: 10px;
+  }
+
+  .image-container {
+    height: 150px; /* reduce image height */
+  }
+
+  .name-rating h3 {
+    font-size: 16px;
+  }
+
+  .restaurant-info {
+    padding: 10px;
+  }
+
+  .rating {
+    font-size: 12px;
+    padding: 2px 6px;
+  }
+
+  .offer-tag {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .cuisine,
+  .price,
+  .location {
+    font-size: 12px;
+  }
+}
+
+
+@media (max-width: 340px) {
+  .restaurants-container {
+    padding: 20px 10px;
+  }
+
+  .restaurants-container h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+}

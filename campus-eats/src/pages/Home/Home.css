@@ -6,14 +6,20 @@
     font-family: 'Nunito', sans-serif;
   }
   
-  .home-container {
-    color: white;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-  
+.home-container {
+  color: white;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* background-attachment: fixed; */
+  overflow-x: hidden;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
   .logo {
     font-size: 28px;
     font-weight: 900;
@@ -112,4 +118,59 @@
     animation: spin 60s linear infinite; /* adjust speed as needed */
   }
   
-  
+@media (max-width: 610px) {
+  .heros {
+    flex-direction: column-reverse; /* Image first, then text */
+    text-align: center;
+    padding: 30px 20px;
+    gap: 30px;
+  }
+
+  .hero {
+    padding: 0;
+  }
+
+  .rotating-image {
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .rotating-image img {
+    width: 250px;
+  }
+}
+@media (max-width: 340px) {
+  .home-container {
+    background-size: cover !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional */
+    background-color: #fff; /* fallback color */
+  }
+
+  .heros {
+    padding: 20px 10px;
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .rotating-image img {
+    width: 200px;
+  }
+}

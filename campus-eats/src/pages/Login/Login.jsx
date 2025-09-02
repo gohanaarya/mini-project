@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Login.css";
 import axios from "axios";
 import { useUserAuth } from "../../context/UserAuthContext";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { FaUserCircle } from "react-icons/fa"; // Icon for demo login button
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -14,7 +15,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", {
+      const res = await axios.post("https://mini-project-n8cx.onrender.com/api/auth/login", {
         email,
         password,
       });
@@ -23,25 +24,31 @@ const Login = () => {
       console.log(data.user);
 
       if (data.success) {
-        // ✅ SAVE TOKEN TO LOCALSTORAGE
-        console.log("Token before saving:", data.token);
         logIn(data.user, data.token);
-        // console.log(data.message)
-
         navigate("/");
-        // delay to show toast
         const userId = data.user._id;
         console.log(userId);
-        // (Optional) Save user info too
-        // localStorage.setItem("user", JSON.stringify(data.user));
-        // alert("Login successful!");
-        // Redirect to another page
       } else {
         toast.error("Login Failed");
       }
     } catch (err) {
-      toast.error("Login Failed", err);
+      toast.error("Login Failed");
+      console.log(err)
     }
+  };
+
+  // 🟢 DEMO LOGIN HANDLER
+  const handleDemoLogin = () => {
+    const demoEmail = "gattuvamshi.set2022@dsuniversity.ac.in";
+    const demoDOB = "2003-05-17"; // assuming password is DOB
+
+    setEmail(demoEmail);
+    setPassword(demoDOB);
+
+    // mimic form submission
+    setTimeout(() => {
+      document.querySelector("form").dispatchEvent(new Event("submit", { cancelable: true, bubbles: true }));
+    }, 100); // delay so states are updated before form submission
   };
 
   return (
@@ -59,7 +66,7 @@ const Login = () => {
           />
         </div>
         <div className="input-group">
-          <label>Password</label>
+          <label>Date of Birth</label>
           <input
             type="date"
             placeholder="YYYY-MM-DD"
@@ -70,6 +77,16 @@ const Login = () => {
         </div>
         <button type="submit" className="login-button">
           Login
+        </button>
+
+        {/* 🟢 DEMO LOGIN BUTTON */}
+        <button
+          type="button"
+          className="login-button demo-login-button"
+          onClick={handleDemoLogin}
+        >
+          <FaUserCircle style={{ marginRight: "8px" }} />
+          Login with Demo Account
         </button>
       </form>
     </div>
